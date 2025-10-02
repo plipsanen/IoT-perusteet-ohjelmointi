@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-pi-pico-w",
+      "id": "pico",
+      "top": -12.85,
+      "left": -6.05,
+      "attrs": { "env": "micropython-20241129-v1.24.1" }
+    },
+    {
+      "type": "wokwi-pir-motion-sensor",
+      "id": "pir1",
+      "top": -149.6,
+      "left": 117.42,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "pico:3V3", "pir1:VCC", "red", [ "h0" ] ],
+    [ "pico:GP28", "pir1:OUT", "blue", [ "h0" ] ],
+    [ "pico:GP20", "pir1:GND", "black", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
